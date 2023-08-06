@@ -1,0 +1,71 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f3f3f3; /* light gray */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-area {
+  background-color: #e0e0e0; /* slightly darker gray */
+  display: grid;
+  grid-template-columns: repeat(
+    20,
+    20px
+  ); /* adjust based on your desired cell size */
+  grid-template-rows: repeat(
+    20,
+    20px
+  ); /* adjust based on your desired cell size */
+  border: 2px solid #7289da; /* Discord blue */
+  overflow: hidden;
+}
+
+.snake-cell {
+  background-color: #7289da;
+  margin: 0.5px;
+  width: 19px;
+  height: 19px;
+}
+
+.apple-cell {
+  background-color: #ff7f7f;
+  margin: 0.5px;
+  width: 19px;
+  height: 19px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #7289da; /* Discord blue */
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #586db3; /* Slightly darker blue for hover effect */
+}
+
+/* Game over and start game texts */
+div > div {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.game-title {
+  font-size: 2rem; /* Adjust the size to your preference */
+  font-weight: bold;
+  color: #7289da; /* Discord blue */
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Spacing between the title and the game area */
+}
